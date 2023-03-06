@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Copyright } from "lucide-react";
+import Curtain from "./components/Curtain";
 
 export default function Home() {
 	return (
@@ -18,8 +19,9 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main className='bg-cream min-h-screen font-serif'>
-				<header className='header p-4 flex justify-between'>
+
+			<main className='relative bg-cream min-h-screen font-serif isolate z-10'>
+				<header className='header p-4 flex justify-between z-1'>
 					<div className='logo font-serif text-xl md:text-2xl'>
 						Vihari Cherukumalli
 					</div>
@@ -32,7 +34,7 @@ export default function Home() {
 						</div>
 					</div>
 				</header>
-				<section className='landing  flex my-48 md:my-96 align-center flex-col'>
+				<section className='landing  flex my-48 md:my-96 align-center flex-col z-1'>
 					<div className='name text-center text-5xl relative md:text-9xl 2xl:text-[148px] flex flex-col !leading-[0.9] items-center'>
 						<div className='name1 flex'>
 							<div className='image  w-[12vw]  items-center  bottom-0 relative mr-3'>
@@ -68,7 +70,7 @@ export default function Home() {
 						</button>
 					</div>
 				</section>
-				<section className='min-h-screen max-w-[1600px] object-contain w-full mx-auto flex flex-col px-4 md:px-12'>
+				<section className='min-h-screen max-w-[1600px] object-contain w-full mx-auto flex flex-col px-4 md:px-12 z-1'>
 					<div className='mb-24'>
 						<div className='text-center text-3xl md:text-6xl w-[300px] md:w-[600px] mx-auto mb-12 md:mb-24'>
 							A camera is the world’s greatest orator.
@@ -82,7 +84,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className='mb-24'>
-						<div className='text-center text-3xl md:text-6xl w-[300px] md:w-[600px] mx-auto mb-12 md:mb-24'>
+						<div className='text-center text-3xl md:text-6xl w-[300px] md:w-[600px] mx-auto mb-12 md:mb-24 z-1'>
 							With images that tell a tale
 						</div>
 						<div className='image flex w-full aspect-video object-contain relative'>
@@ -147,6 +149,7 @@ export default function Home() {
 						{new Date().getFullYear()}
 					</div>
 				</footer>
+				<Curtain className='z-100' />
 			</main>
 		</>
 	);
